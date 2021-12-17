@@ -1,4 +1,4 @@
-import 'package:image_painter/image_painter.dart';
+import '../../image_painter.dart';
 
 class SpanishTextDelegate implements TextDelegate {
   @override
