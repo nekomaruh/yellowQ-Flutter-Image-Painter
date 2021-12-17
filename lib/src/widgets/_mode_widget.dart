@@ -1,3 +1,4 @@
+import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 
 import '../../image_painter.dart';
@@ -52,7 +53,7 @@ List<ModeData> paintModes(TextDelegate textDelegate) => [
           mode: PaintMode.rect,
           label: textDelegate.rectangle),
       ModeData(
-          icon: Icons.edit,
+          icon: CommunityMaterialIcons.gesture,
           mode: PaintMode.freeStyle,
           label: textDelegate.drawing),
       ModeData(
@@ -67,10 +68,13 @@ List<ModeData> paintModes(TextDelegate textDelegate) => [
           icon: Icons.power_input,
           mode: PaintMode.dashLine,
           label: textDelegate.dashLine),
+      /*
       ModeData(
           icon: Icons.text_format,
           mode: PaintMode.text,
           label: textDelegate.arrow),
+
+   */
     ];
 
 @immutable

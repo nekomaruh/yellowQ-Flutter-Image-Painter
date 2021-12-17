@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
+import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart' hide Image;
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
@@ -797,18 +798,28 @@ class ImagePainterState extends State<ImagePainter> {
                   itemBuilder: (_) => [_showOptionsRow(_ctrl)],
                 );
               }),
+          PopupMenuButton(
+            tooltip: textDelegate.changeBrushSize,
+            shape: ContinuousRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            icon: widget.brushIcon ??
+                Icon(CommunityMaterialIcons.laser_pointer,
+                    color: Colors.grey[700]),
+            itemBuilder: (_) => [_showRangeSlider()],
+          ),
           ValueListenableBuilder<Controller>(
               valueListenable: _controller,
               builder: (_, controller, __) {
                 return PopupMenuButton(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  padding: const EdgeInsets.symmetric(vertical: 12),
                   shape: ContinuousRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
                   tooltip: textDelegate.changeColor,
                   icon: widget.colorIcon ??
                       Container(
-                        padding: const EdgeInsets.all(2.0),
+                        //padding: const EdgeInsets.all(2.0),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(color: Colors.grey),
@@ -818,22 +829,13 @@ class ImagePainterState extends State<ImagePainter> {
                   itemBuilder: (_) => [_showColorPicker(controller)],
                 );
               }),
-          PopupMenuButton(
-            tooltip: textDelegate.changeBrushSize,
-            shape: ContinuousRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            icon:
-                widget.brushIcon ?? Icon(Icons.brush, color: Colors.grey[700]),
-            itemBuilder: (_) => [_showRangeSlider()],
-          ),
-          IconButton(
-              icon: const Icon(Icons.text_format), onPressed: _openTextDialog),
+          //IconButton(icon: const Icon(Icons.text_format), onPressed: _openTextDialog),
           const Spacer(),
           IconButton(
               tooltip: textDelegate.undo,
-              icon:
-                  widget.undoIcon ?? Icon(Icons.reply, color: Colors.grey[700]),
+              icon: widget.undoIcon ??
+                  Icon(CommunityMaterialIcons.undo_variant,
+                      color: Colors.grey[700]),
               onPressed: () {
                 if (_paintHistory.isNotEmpty) {
                   setState(_paintHistory.removeLast);
@@ -842,7 +844,7 @@ class ImagePainterState extends State<ImagePainter> {
           IconButton(
             tooltip: textDelegate.undo,
             icon: widget.clearAllIcon ??
-                Icon(Icons.clear, color: Colors.grey[700]),
+                Icon(CommunityMaterialIcons.eraser, color: Colors.grey[700]),
             onPressed: () => setState(_paintHistory.clear),
           ),
         ],
