@@ -19,9 +19,8 @@ class ColorItem extends StatelessWidget {
               color: isSelected! ? Colors.white70 : Colors.transparent,
               shape: BoxShape.circle,
               border: Border.all(
-                  color: isSelected! ? Colors.black : Colors.grey[200]!)),
-          child: CircleAvatar(
-              radius: isSelected! ? 16 : 12, backgroundColor: color),
+                  color: isSelected! ? Colors.black54 : Colors.grey[300]!)),
+          child: CircleAvatar(radius: 16, backgroundColor: color),
         ),
       ),
     );
@@ -30,17 +29,22 @@ class ColorItem extends StatelessWidget {
 
 const List<Color> editorColors = [
   Colors.black,
-  Colors.white,
-  Colors.red,
   Colors.grey,
+  Colors.white,
   Colors.teal,
   Colors.cyan,
   Colors.blue,
-  Colors.blueAccent,
-  Colors.greenAccent,
+  //Colors.blueAccent,
+  //Colors.greenAccent,
+  Colors.lightGreen,
   Colors.green,
-  Colors.pink,
   Colors.yellow,
+  Colors.amber,
   Colors.orange,
-  Colors.brown,
+  //Colors.deepOrange,
+  Colors.red,
+  Colors.pink,
+  Colors.purple,
+  Colors.deepPurple,
+  Colors.brown
 ];
