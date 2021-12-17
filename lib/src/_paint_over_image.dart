@@ -842,7 +842,7 @@ class ImagePainterState extends State<ImagePainter> {
                 }
               }),
           IconButton(
-            tooltip: textDelegate.undo,
+            tooltip: textDelegate.clearAllProgress,
             icon: widget.clearAllIcon ??
                 Icon(CommunityMaterialIcons.eraser, color: Colors.grey[700]),
             onPressed: () => setState(_paintHistory.clear),
