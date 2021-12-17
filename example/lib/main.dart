@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_painter/image_painter.dart';
 import 'package:image_painter_example/dutch_text_delegate.dart';
-import 'package:image_painter_example/es_text_delegate.dart';
+import 'package:image_painter/src/delegates/es_text_delegate.dart';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 
