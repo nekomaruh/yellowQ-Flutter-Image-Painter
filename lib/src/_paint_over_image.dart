@@ -790,11 +790,9 @@ class ImagePainterState extends State<ImagePainter> {
                   shape: ContinuousRectangleBorder(
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  icon: Icon(
-                      paintModes(textDelegate)
-                          .firstWhere((item) => item.mode == _ctrl.mode)
-                          .icon,
-                      color: Colors.grey[700]),
+                  icon: Icon(paintModes(textDelegate)
+                      .firstWhere((item) => item.mode == _ctrl.mode)
+                      .icon),
                   itemBuilder: (_) => [_showOptionsRow(_ctrl)],
                 );
               }),
@@ -804,8 +802,7 @@ class ImagePainterState extends State<ImagePainter> {
               borderRadius: BorderRadius.circular(5),
             ),
             icon: widget.brushIcon ??
-                Icon(CommunityMaterialIcons.laser_pointer,
-                    color: Colors.grey[700]),
+                const Icon(CommunityMaterialIcons.laser_pointer),
             itemBuilder: (_) => [_showRangeSlider()],
           ),
           ValueListenableBuilder<Controller>(
@@ -822,7 +819,7 @@ class ImagePainterState extends State<ImagePainter> {
                         //padding: const EdgeInsets.all(2.0),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          border: Border.all(color: Colors.grey),
+                          //border: Border.all(color: Colors.grey),
                           color: controller.color,
                         ),
                       ),
@@ -834,8 +831,7 @@ class ImagePainterState extends State<ImagePainter> {
           IconButton(
               tooltip: textDelegate.undo,
               icon: widget.undoIcon ??
-                  Icon(CommunityMaterialIcons.undo_variant,
-                      color: Colors.grey[700]),
+                  const Icon(CommunityMaterialIcons.undo_variant),
               onPressed: () {
                 if (_paintHistory.isNotEmpty) {
                   setState(_paintHistory.removeLast);
@@ -844,7 +840,7 @@ class ImagePainterState extends State<ImagePainter> {
           IconButton(
             tooltip: textDelegate.clearAllProgress,
             icon: widget.clearAllIcon ??
-                Icon(CommunityMaterialIcons.eraser, color: Colors.grey[700]),
+                const Icon(CommunityMaterialIcons.eraser),
             onPressed: () => setState(_paintHistory.clear),
           ),
         ],
