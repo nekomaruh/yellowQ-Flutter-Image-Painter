@@ -17,7 +17,7 @@ class SelectionItems extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 2.0),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4.0),
-          color: isSelected! ? Colors.blue : Colors.transparent),
+          color: isSelected! ? Theme.of(context).primaryColor : Colors.transparent),
       child: ListTile(
         leading: IconTheme(
           data: const IconThemeData(opacity: 1.0),

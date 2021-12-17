@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_painter/image_painter.dart';
 import 'package:image_painter_example/dutch_text_delegate.dart';
+import 'package:image_painter_example/es_text_delegate.dart';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -75,7 +76,7 @@ class _ImagePainterExampleState extends State<ImagePainterExample> {
         "assets/sample.jpg",
         key: _imageKey,
         scalable: false,
-        textDelegate: DutchTextDelegate(),
+        textDelegate: SpanishTextDelegate(),
         initialStrokeWidth: 2,
         initialColor: Colors.green,
         initialPaintMode: PaintMode.line,
