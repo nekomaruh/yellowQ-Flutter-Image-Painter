@@ -788,7 +788,7 @@ class ImagePainterState extends State<ImagePainter> {
                 return PopupMenuButton(
                   tooltip: textDelegate.changeMode,
                   shape: ContinuousRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.circular(5),
                   ),
                   icon: Icon(
                       paintModes(textDelegate)
@@ -801,7 +801,7 @@ class ImagePainterState extends State<ImagePainter> {
           PopupMenuButton(
             tooltip: textDelegate.changeBrushSize,
             shape: ContinuousRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(5),
             ),
             icon: widget.brushIcon ??
                 Icon(CommunityMaterialIcons.laser_pointer,
@@ -814,7 +814,7 @@ class ImagePainterState extends State<ImagePainter> {
                 return PopupMenuButton(
                   padding: const EdgeInsets.symmetric(vertical: 12),
                   shape: ContinuousRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(5),
                   ),
                   tooltip: textDelegate.changeColor,
                   icon: widget.colorIcon ??
