@@ -2,10 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_painter/image_painter.dart';
+import 'package:image_painter/src/delegates/es_text_delegate.dart';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
-
-import 'dutch_text_delegate.dart';
 
 void main() => runApp(ExampleApp());
 
@@ -15,7 +14,7 @@ class ExampleApp extends StatelessWidget {
     return MaterialApp(
       title: 'Image Painter Example',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: ImagePainterExample(),
@@ -82,7 +81,7 @@ class _ImagePainterExampleState extends State<ImagePainterExample> {
         key: _imageKey,
         scalable: true,
         initialStrokeWidth: 2,
-        textDelegate: DutchTextDelegate(),
+        textDelegate: SpanishTextDelegate(),
         initialColor: Colors.green,
         initialPaintMode: PaintMode.line,
       ),
