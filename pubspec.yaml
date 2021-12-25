@@ -11,7 +11,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+<<<<<<< HEAD
   vector_math: ^2.1.1
+=======
+  vector_math: ^2.1.0
+>>>>>>> 5560e93ac3f5ca5d71cbdc0007048069e7f2e573
   community_material_icon: ^5.9.55
 
 dev_dependencies:
