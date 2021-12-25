@@ -2,11 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_painter/image_painter.dart';
-<<<<<<< HEAD
-=======
-import 'package:image_painter_example/dutch_text_delegate.dart';
->>>>>>> 5560e93ac3f5ca5d71cbdc0007048069e7f2e573
-import 'package:image_painter/src/delegates/es_text_delegate.dart';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -83,14 +78,9 @@ class _ImagePainterExampleState extends State<ImagePainterExample> {
       body: ImagePainter.asset(
         "assets/sample.jpg",
         key: _imageKey,
-<<<<<<< HEAD
         scalable: true,
-=======
-        scalable: false,
         textDelegate: SpanishTextDelegate(),
->>>>>>> 5560e93ac3f5ca5d71cbdc0007048069e7f2e573
         initialStrokeWidth: 2,
-        textDelegate: SpanishTextDelegate(),
         initialColor: Colors.green,
         initialPaintMode: PaintMode.line,
       ),
