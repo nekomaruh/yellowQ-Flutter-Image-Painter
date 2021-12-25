@@ -17,16 +17,6 @@ packages:
     version: "1.15.0"
   community_material_icon:
     dependency: "direct main"
-<<<<<<< HEAD
-=======
-    description:
-      name: community_material_icon
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.9.55"
-  effective_dart:
-    dependency: "direct dev"
->>>>>>> 5560e93ac3f5ca5d71cbdc0007048069e7f2e573
     description:
       name: community_material_icon
       url: "https://pub.dartlang.org"
